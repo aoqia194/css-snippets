@@ -1,0 +1,11 @@
+#sponsor-button {
+    display: none !important;
+}
+
+#flexible-item-buttons {
+    display: none !important;
+}
+
+#top-level-buttons-computed > yt-button-view-model {
+    display: none !important;
+}
