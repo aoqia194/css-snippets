@@ -74,7 +74,7 @@ html::-webkit-scrollbar {
 
 #DetailOverlayInner {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
 
   margin: auto;
   padding: 0;
@@ -89,6 +89,9 @@ html::-webkit-scrollbar {
 /* Item Flex Container */
 
 .DetailIllustItemLink {
+  overflow-x: hidden;
+  overflow-y: auto;
+
   padding: 0;
 
   display: flex;
@@ -99,10 +102,11 @@ html::-webkit-scrollbar {
   align-items: center;
   gap: 0.25rem;
 
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 .DetailIllustItemImage {
+  overflow: hidden;
   display: flex;
 
   padding: 0;
