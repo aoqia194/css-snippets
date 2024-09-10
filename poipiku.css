@@ -1,109 +1,125 @@
 html {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 html::-webkit-scrollbar {
-      display: none;
+  display: none;
 }
-    
+
 /* Overlay Start */
-    
+
 #DetailOverlay {
-      overflow: hidden;
-    
-      min-width: 0;
-      min-height: 0;
-      width: auto;
-      height: auto;
-      max-width: 100vw;
-      max-height: 100vh;
-    
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    
-      margin: 0;
-      padding: 0;
-    
-      box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+
+  display: flex !important;
+  overflow: hidden;
 }
-    
+
+#DetailOverlay > #DetailOverlayInner {
+  display: flex !important;
+}
+
 /* Header */
-    
-.DetailOverlayHeader {
-      background: none;
-    
-      position: fixed;
-      overflow: hidden;
-    
-      min-width: 0;
-      min-height: 0;
+
+#DetailOverlay > .DetailOverlayHeader {
+  display: flex;
+  background: none !important;
+
+  position: fixed;
+
+  width: auto;
+  height: auto;
+  max-width: min-content;
+  max-height: min-content;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-    
-#DetailOverlayClose {
-      overflow: hidden;
+
+.DetailOverlayHeader > * {
+  display: flex;
+  padding: 1rem;
+
+  width: min-content;
+  height: min-content;
+
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
-    
-#DetailOverlayClose svg {
-      overflow: hidden;
-    
-      background: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 0 0 0.2em rgba(0, 0, 0, 0.8);
-      border-radius: 50%;
+
+.DetailOverlayHeader > * > svg {
+  width: 1rem;
+  height: auto;
 }
-    
+
+.DetailOverlayClose > svg {
+  overflow: hidden;
+
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 0 0.2em rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+}
+
 /* Overlay Inner */
-    
+
 #DetailOverlayInner {
-      overflow-x: hidden;
-      overflow-y: scroll;
-    
-      margin: auto;
-      padding: 0;
-    
-      min-width: 0;
-      min-height: 0;
-      width: auto;
-      height: 100vmin;
-      max-width: 100vw;
-      max-height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  margin: auto;
+  padding: 0;
+  min-width: 0;
+  min-height: 0;
+  width: auto;
+  height: 100vmin;
+  max-width: 100vw;
+  max-height: 100vh;
 }
-    
+
 /* Item Flex Container */
-    
+
 .DetailIllustItemLink {
-      padding: 0;
-    
-      display: flex;
-      flex-direction: row-reverse;
-      flex-wrap: wrap;
-    
-      justify-content: stretch;
-      align-items: center;
-      gap: 0.25rem;
-    
-      box-sizing: border-box;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+
+  box-sizing: border-box;
 }
-    
+
 .DetailIllustItemImage {
-      padding: 0;
-    
-      width: auto;
-      height: 100vh;
-      max-width: 100vmax;
-      max-height: auto;
-    
-      object-fit: contain;
-      box-sizing: border-box;
+  display: flex;
+
+  padding: 0;
+
+  width: auto;
+  height: 100vh;
+  max-width: 100vmax;
+  max-height: auto;
+
+  object-fit: contain;
+  box-sizing: content-box;
 }
-    
+
 .DetailIllustItemProhibit {
-      display: none;
+  display: none !important;
 }
-    
+
 #DetailIllustAd {
-      display: none;
+  display: none !important;
 }
